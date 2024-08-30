@@ -9,5 +9,26 @@
     "default": 10,
     "max": 50
   },
-  "mongodb": "mongodb://127.0.0.1:27017/Message-app"
+  "mongodb": "mongodb://127.0.0.1:27017/Message-app",
+  "authentication": {
+    "entity": "user",
+    "service": "users",
+    "secret": "Uc3HM2gg+/OqM1eaWTSVXXkYrq0C1WtS",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  }
 }
