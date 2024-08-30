@@ -33,7 +33,7 @@ const Login = () => {
                 name="text"
                 value={userName}
                 placeholder="Enter your name"
-                onChange={e=>setPassword(e.target.value)}
+                onChange={e=>setuserName(e.target.value)}
               />
             </fieldset>
             <fieldset>
